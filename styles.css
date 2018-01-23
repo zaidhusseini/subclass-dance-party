@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addBlinkyDancer, .addScalingDancer{
   padding:5px 12px;
   float:right;
 }
@@ -24,4 +24,29 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.blinky-dancer{
+  position:absolute;
+}
+
+
+.scaling-dancer{
+  position:absolute;
+  height: 50px;
+  width: 50px;
+  -webkit-transition-property: width height;
+  -webkit-transition-duration: 2s;
+  transition-property: width height;
+  transition-duration: 2s;
+}
+
+.scaling-dancer-large{
+  position:absolute;
+  height: 400px;
+  width: 400px;
+  -webkit-transition-property: width height;
+  -webkit-transition-duration: 2s;
+  transition-property: width height;
+  transition-duration: 2s;
+
 }
