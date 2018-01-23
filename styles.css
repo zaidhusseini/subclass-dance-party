@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addBlinkyDancer, .addScalingDancer{
+.title, .addBlinkyDancer, .addScalingDancer, .addRotatingDancer{
   padding:5px 12px;
   float:right;
 }
@@ -28,16 +28,18 @@ body, a:link, a:visited, a:active{
 .blinky-dancer{
   position:absolute;
 }
-
+.rotating-dancer{
+  position:absolute;
+}
 
 .scaling-dancer{
   position:absolute;
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   -webkit-transition-property: width height;
-  -webkit-transition-duration: 2s;
+  -webkit-transition-duration: 0.5s;
   transition-property: width height;
-  transition-duration: 2s;
+  transition-duration: 0.5s;
 }
 
 .scaling-dancer-large{
@@ -45,8 +47,22 @@ body, a:link, a:visited, a:active{
   height: 400px;
   width: 400px;
   -webkit-transition-property: width height;
-  -webkit-transition-duration: 2s;
+  -webkit-transition-duration: 0.5s;
   transition-property: width height;
-  transition-duration: 2s;
+  transition-duration: 0.5s;
+}
 
+.rotating-dancer{
+  position:absolute;
+  height: 200px;
+  width: 200px;
+  transition-duration: 1s;
+}
+
+.rotating-dancer-large{
+  position:absolute;
+  height: 200px;
+  width: 200px;
+  transform: rotate(360deg);;
+  transition-duration: 1s;
 }
