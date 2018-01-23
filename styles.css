@@ -1,15 +1,20 @@
-body, html{
+body, html, .box{
   height:100%;
 }
-body{
+body, .box{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
 }
+
+.box {
+width: 80%;
+height: 80%;
+}
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addBlinkyDancer, .addScalingDancer, .addRotatingDancer{
+.title, .addBlinkyDancer, .addScalingDancer, .addRotatingDancer, .lineUpDancers{
   padding:5px 12px;
   float:right;
 }
@@ -21,12 +26,11 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
   border-radius:10px;
   position:absolute;
 }
 .blinky-dancer{
-  position:absolute;
+ position:absolute;
 }
 .rotating-dancer{
   position:absolute;
@@ -66,3 +70,9 @@ body, a:link, a:visited, a:active{
   transform: rotate(360deg);;
   transition-duration: 1s;
 }
+
+.move-over{
+  /*transition: top left;*/
+  transition-duration: 2s;
+}
+

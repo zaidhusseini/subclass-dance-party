@@ -3,7 +3,7 @@ var MakeScalingDancer = function(top, left, timeBetweenSteps) {
   
   // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
   // so we must keep a copy of the old version of this function
-  this.$node = $('<img src="https://media.tenor.com/images/d6a4796d95e8131dafdb45de4e7839bc/tenor.gif" class="scaling-dancer"></img>');
+  this.$node = $('<img src="https://thumbs.gfycat.com/DeepClassicCrow-max-1mb.gif" class="scaling-dancer dancer"></img>');
   this.step();
   this.setPosition(top, left);
 

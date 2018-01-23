@@ -23,11 +23,13 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $(".box").height() * Math.random(),
+      $(".box").width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+
+    dancers.push(dancer);
+    $('.box').append(dancer.$node);
   });
 
 
@@ -41,11 +43,13 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      500
+      $(".box").height() * Math.random(),
+      $(".box").width() * Math.random(),
+      2000
     );
-    $('body').append(dancer.$node);
+    
+    dancers.push(dancer);
+    $('.box').append(dancer.$node);
   });
 
   $('.addRotatingDancer').on('click', function(event) {
@@ -56,13 +60,32 @@ $(document).ready(function() {
     var dancerMakerFunction = window[dancerMakerFunctionName];
 
     // make a dancer with a random position
-
+    
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      1000
+      $(".box").height() * Math.random(),
+      $(".box").width() * Math.random(),
+      2000
     );
-    $('body').append(dancer.$node);
+
+    dancers.push(dancer);
+    $('.box').append(dancer.$node);
   });
 
+
+  $('.lineUpDancers').on('click', function(event) {
+    for(var i=0; i<dancers.length; i++){
+      dancers[i].lineup();
+    }
+  });
+
+
+  $('.box').on('mouseover', '.dancer', function(event) {
+    console.log('mouse over works');
+    var styleSettings = {
+      top: $(".box").height() * Math.random(),
+      left: $(".box").width() * Math.random(),
+    };
+    $(this).css(styleSettings);
+    $(this).addClass('move-over');
+  });
 });
