@@ -3,8 +3,14 @@ body, html, .box{
 }
 body, .box{
   margin: 0px;
-  background-color:#444;
   font-size: 18px;
+}
+
+body {
+  background-image: url("theater.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .box {
@@ -20,10 +26,10 @@ body, a:link, a:visited, a:active{
 }
 .topbar{
   height:32px;
-  background-color: #555;
+  background-color: black;
 }
 .title{
-  background-color: #777;
+  background-color: black;
 }
 .dancer{
   border-radius:10px;
@@ -48,8 +54,8 @@ body, a:link, a:visited, a:active{
 
 .scaling-dancer-large{
   position:absolute;
-  height: 400px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
   -webkit-transition-property: width height;
   -webkit-transition-duration: 0.5s;
   transition-property: width height;
@@ -69,6 +75,8 @@ body, a:link, a:visited, a:active{
   width: 200px;
   transform: rotate(360deg);;
   transition-duration: 1s;
+  border: blue;
+  border-width: 100px;
 }
 
 .move-over{
@@ -76,3 +84,10 @@ body, a:link, a:visited, a:active{
   transition-duration: 2s;
 }
 
+/*
+.close{
+  height: 500px;
+  border: blue;
+  border-width: 100px;
+}
+*/

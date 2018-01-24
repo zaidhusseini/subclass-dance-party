@@ -1,6 +1,44 @@
 $(document).ready(function() {
   window.dancers = [];
 
+  var convertCssValueToNumber = function (node, cssParam){
+
+  return Number(node.css(cssParam).slice(0, -2));
+}
+
+  var calculateC = function(a, b){
+      
+  var aSquared = (convertCssValueToNumber(a,"top") - convertCssValueToNumber(b,"top"))**2;
+  var bSquared = (convertCssValueToNumber(a,"left") - convertCssValueToNumber(b,"left"))**2;
+  
+  return Math.sqrt(aSquared + bSquared);
+}
+
+  function collidingDancers(){
+  var c;
+  
+    for (var i = 0; i <dancers.length; i++){
+      for (var j = i + 1; j < dancers.length; j++){
+        c = calculateC(dancers[i].$node, dancers[j].$node);
+
+        if (c < 200){
+          dancers[i].close();
+          dancers[j].close();
+          // console.log(dancers[i].$node.attr('class'));
+        } else {
+          dancers[i].apart();
+          dancers[j].apart();
+        }
+
+        
+      }
+
+    }
+  
+  }
+
+setInterval(collidingDancers, 0);
+
   $('.addBlinkyDancer').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -49,6 +87,7 @@ $(document).ready(function() {
     );
     
     dancers.push(dancer);
+
     $('.box').append(dancer.$node);
   });
 

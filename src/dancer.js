@@ -34,9 +34,27 @@ MakeDancer.prototype.lineup = function() {
   // where it belongs on the page. See http://api.jquery.com/css/
   //
   var styleSettings = {
-    top: '300px',
+    top: '650px',
     display: 'inline-block',
     float: 'left'
   };
+  this.$node.css(styleSettings);
+};
+
+MakeDancer.prototype.close = function(){
+  var styleSettings = {
+    filter: "blur(5px)",
+    transition: '1s'
+  };
+  
+  this.$node.css(styleSettings);
+};
+
+
+MakeDancer.prototype.apart = function(){
+  var styleSettings = {
+    filter: "none",
+  };
+  
   this.$node.css(styleSettings);
 };
