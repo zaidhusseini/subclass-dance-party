@@ -34,7 +34,7 @@ MakeDancer.prototype.lineup = function() {
   // where it belongs on the page. See http://api.jquery.com/css/
   //
   var styleSettings = {
-    top: '650px',
+    top: '450px',
     display: 'inline-block',
     float: 'left'
   };
